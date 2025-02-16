@@ -196,6 +196,7 @@
             }
         }
     </style>
+
 </head>
 <body>
     <div class="flex-container">
@@ -245,5 +246,32 @@
             </main>
         </div>
     </div>
+
+    <script>
+        function loadContent(page) {
+            const content = document.querySelector('.content');
+            content.innerHTML = '';
+    
+            if (page === 'calendar') {
+                const calendar = document.createElement('iframe');
+                calendar.src = 'https://th.bing.com/th/id/OIP.Ef_py3jkp0DsUgbAV66Q1QHaJl?w=1020&h=1320&rs=1&pid=ImgDetMain'; // Replace with the actual calendar link
+                calendar.style.width = '100%';
+                calendar.style.height = '600px';
+                content.appendChild(calendar);
+            }
+        }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.nav-buttons button, .left-sidebar button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const text = button.textContent.trim().toLowerCase();
+                    if (text.includes('calendar') || text.includes('overview') || text.includes('home')) {
+                        loadContent('calendar');
+                    }
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>

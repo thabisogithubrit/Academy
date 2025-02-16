@@ -107,9 +107,30 @@
         footer {
             background-color: #f4f4f4;
             color: rgb(39, 35, 35);
-            text-align: center;
             padding: 1rem;
+            padding: 10px 0;
         }
+
+        footer table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        footer th, footer td {
+            padding: 0px;
+            border: 1px solid #fff; /* Add border here */
+            border-collapse: collapse;
+        }
+        
+        footer tr {
+            display: flex;
+        }
+        
+        footer th, footer td {
+            flex: 1;
+        }
+        
+                
         .flex-container {
             display: flex;
             flex-direction: column;
@@ -192,7 +213,18 @@
             </main>
         </div>
         <footer>
-            © 2025 Your Website. All rights reserved.
+            <table>
+                <tr>
+                    <th>
+                        <td>©2025 Academy.</td>
+                        <td><a href="StudRegistration.html">AcademyOnlineApplication</a></td>
+                        <td><a href="">AcademyPrivacyNote</a></td>
+                        <td>AcademyStaffMembers</td>
+                    </th>
+                </tr>
+            </table>
+            
+            
         </footer>
     </div>
 </body>
